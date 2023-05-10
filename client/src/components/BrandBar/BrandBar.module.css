@@ -1,0 +1,23 @@
+.container{
+    display:flex;
+    height:100%;
+    padding: 5px 0;
+}
+.brand{
+    border:1px solid black;
+    border-radius: 10%;
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+    font-size:20px;
+    padding: 5px 5px;
+    cursor: pointer;
+}
+.brand:hover{
+    background: dodgerblue;
+    color: white;
+}
+.active{
+    border:1px solid #460f0f;
+    color:red;
+}

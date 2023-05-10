@@ -1,0 +1,45 @@
+.container{
+    padding:10px 20px;
+    display:flex;
+}
+.img{
+    width: 100vh;
+}
+.text{
+    width:300px;
+    display:flex;
+    flex-direction: column;
+    gap:30px;
+}
+.title{
+    font-size:24px;
+    font-weight:bolder;
+    display:flex;
+    justify-content: center;
+}
+.price{
+    font-size: 30px;
+}
+.rating{
+    font-size:20px;
+}
+.buy{
+    background: red;
+    width: 150px;
+    font-size: 24px;
+    font-weight: bolder;
+    text-align: center;
+    border:1px solid black;
+    border-radius: 10px;
+    cursor:pointer;
+}
+.buy:hover{
+    color: white;
+    box-shadow: inset 2px 3px 10px 1px rgba(0,0,0,0.75);
+}
+.description{
+    text-align: center;
+    font-size:24px;
+    letter-spacing: 1px;
+    margin-bottom:20px;
+}
