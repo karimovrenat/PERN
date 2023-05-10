@@ -1,0 +1,40 @@
+.active{
+    position:absolute;
+    top:0;
+    left:0;
+    background: rgba(0, 0, 0, 0.25);
+    width: 100vw;
+    height: 100vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.notActive{
+    position:absolute;
+    top:0;
+    left:0;
+    display: none;
+    opacity:0;
+}
+.block{
+    position:relative;
+    width:60vw;
+    padding:20px 10px;
+    background: white;
+}
+.submitBlock{
+    margin-top: 20px;
+    display:flex;
+    height:50px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cancel{
+    border: 1px red solid;
+    color:red;
+}
+.submit{
+    border: 1px green solid;
+    color:green;
+}

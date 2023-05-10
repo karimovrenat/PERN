@@ -1,0 +1,42 @@
+.body{
+    background: rgba(0, 157, 255, 0.96);
+    height:10vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.container{
+    display:flex;
+    justify-content: space-between;
+    margin:0 20px;
+}
+.logo{
+    background:#ffffff;
+    border-radius: 25%;
+    font-size: 24px;
+    font-weight: bolder;
+    border: 1px dashed blue;
+}
+.cart{
+    display: flex;
+    background: white;
+    padding: 5px 5px;
+    border:2px solid black;
+    border-radius: 10px;
+    cursor:pointer;
+}
+.img{
+    height:30px;
+    width:30px;
+}
+.panel{
+    display: flex;
+    gap: 30px;
+}
+.panel a{
+    color:white;
+    font-size: 20px;
+}
+.panel a:hover{
+    color:black;
+}

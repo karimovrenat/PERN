@@ -1,0 +1,17 @@
+.buttonBlock{
+    margin-top:20px;
+    display:flex;
+    justify-content:space-between;
+}
+.buttonBlock button{
+    border:solid 3px black;
+    border-radius: 25%;
+    font-size: 24px;
+    font-weight: bolder;
+}
+.cancel{
+    color: red;
+}
+.submit{
+    color:green;
+}

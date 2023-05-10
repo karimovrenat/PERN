@@ -1,0 +1,24 @@
+.body{
+    height:90vh;
+}
+.brandBar{
+    height:5vh;
+    padding:0 0 0 250px;
+}
+.main{
+    display: flex;
+    height: 80vh;
+    width: 100%;
+}
+.sideBar{
+
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    margin-left:20px;
+
+}
+.productTable{
+    width:100%;
+    padding:20px;
+}

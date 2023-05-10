@@ -1,0 +1,15 @@
+.container{
+    padding:20px 10px;
+    display:flex;
+    flex-direction: column;
+    gap:30px;
+}
+.reference{
+    border-radius: 15px;
+    text-align: center;
+    font-size: 24px;
+    font-weight:bolder;
+    padding:20px;
+    cursor:pointer;
+    border:1px solid black;
+}
