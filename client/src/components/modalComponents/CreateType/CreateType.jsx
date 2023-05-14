@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import cl from './CreateType.module.css'
-import {createType} from "../../http/deviceApi";
+import {createType} from "../../../http/deviceApi";
 
 const CreateType = ({setActive}) => {
     const [value,setValue] = useState('');

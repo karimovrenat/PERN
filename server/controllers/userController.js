@@ -23,7 +23,7 @@ class UserController{
                 }
                 const hashPassword = await bcrypt.hash(password,5);
                 const user = await User.create({email, role, password: hashPassword})
-                const basket = await Basket.create({user_id:user.id})
+                const basket = await Basket.create({userId:user.id})
                 return res.status(200).json(basket);
         }
         async login(req,res,next){
@@ -36,7 +36,7 @@ class UserController{
                 if(!comparePassword){
                         return next(ApiError.internal(' Password error'));
                 }
-                const basket = JSON.stringify(await Basket.findOne({where:{user_id:user.id}}));
+                const basket = JSON.stringify(await Basket.findOne({where:{userId:user.id}}));
                 const token = generateJwt(user.id, user.email, user.role);
                 return res.json({token,basket});
         }

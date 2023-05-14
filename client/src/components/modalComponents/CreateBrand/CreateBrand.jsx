@@ -1,7 +1,7 @@
 import React from 'react';
 import cl from "../CreateType/CreateType.module.css";
 import {useState} from "react";
-import {createBrand} from "../../http/deviceApi";
+import {createBrand} from "../../../http/deviceApi";
 
 const CreateBrand = ({setActive}) => {
     const [value,setValue] = useState('');

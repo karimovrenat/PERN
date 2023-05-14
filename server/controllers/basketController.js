@@ -1,18 +1,19 @@
-const {BasketDevice} = require('../models/models')
+const {BasketDevice,Device} = require('../models/models')
 class BasketController{
         async create(req,res){
-                const {device_id,basket_id,amount} = req.body;
-                const basket_device = await BasketDevice.create({device_id,basket_id,amount});
+                const {deviceId,basketId,amount} = req.body;
+                const basket_device = await BasketDevice.create({deviceId,basketId,amount});
                 return res.json(basket_device);
         }
         async change(req,res){
-                const {device_id,basket_id,amount,id} = req.body;
-                const basket = await BasketDevice.update({device_id,basket_id,amount},{where:{id:id}});
+                const {deviceId,basketId,amount,id} = req.body;
+                const basket = await BasketDevice.update({deviceId,basketId,amount},{where:{id:id}});
                 return res.json(basket);
         }
         async getAll(req,res){
-                const {id} = req.query;
-                const basket = await BasketDevice.findAll({where:{basket_id:id}});
+                const basket = await BasketDevice.findAll({
+                        include: [{model: Device,as:'device'}]
+                });
                 return res.json(basket);
         }
         async remove(req,res){

@@ -16,13 +16,14 @@ const Basket = () => {
        }
        else{
            products.map(item=>{
-               item.basket_id = basket_id;
-               item.device_id = item.id;
+               item.basketId = basket_id;
+               item.deviceId = item.id;
            })
            products.map(item=>{
                createBasket(item).then(data=>console.log(data));
            })
        }
+       localStorage.removeItem('productsId');
     }
     return (
         <div className={cl.body}>

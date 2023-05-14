@@ -1,7 +1,7 @@
 import React, {useContext, useState} from 'react';
-import {Context} from "../../index";
+import {Context} from "../../../index";
 import cl from "./CreateDevice.module.css"
-import {createDevice, fetchBrands, fetchTypes} from "../../http/deviceApi";
+import {createDevice, fetchBrands, fetchTypes} from "../../../http/deviceApi";
 import {useEffect} from "react";
 import {observer} from "mobx-react-lite";
 
@@ -10,7 +10,7 @@ const CreateDevice = observer( ({setActive}) => {
     const [file,setFile] = useState(null);
     const [info,setInfo] = useState([]);
     const [name,setName] = useState('')
-    const [price,setPrice] = useState(null);
+    const [price,setPrice] = useState(0);
 
     useEffect(()=>{
         fetchBrands().then(data=>device.setBrands(data))
