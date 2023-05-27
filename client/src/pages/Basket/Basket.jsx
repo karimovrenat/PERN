@@ -19,11 +19,16 @@ const Basket = () => {
                item.basketId = basket_id;
                item.deviceId = item.id;
            })
+           products.push({end:1,basketId:basket_id});
            products.map(item=>{
-               createBasket(item).then(data=>console.log(data));
+               createBasket(item).then(data=>{
+                   if(typeof(data) === 'number') localStorage.setItem('basketId',JSON.stringify(data))
+                   console.log(data,typeof(data));
+               });
            })
        }
        localStorage.removeItem('productsId');
+       navigate('/');
     }
     return (
         <div className={cl.body}>
