@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import {fetchBasket} from "../../../http/basketApi";
 
+
 const ShowOrder = () => {
     const [user,setUser] = useState([])
     const [basket,setBasket] = useState([])
@@ -10,17 +11,20 @@ const ShowOrder = () => {
             setBasket(data.basket);
         })
     },[])
-console.log(user,basket);
+console.log(basket);
+    let checkBasketId = 0;
+    let newBasket = basket.map((product)=><>
+        {(product.basketId !== checkBasketId) && <br/>}
+        {(product.basketId !== checkBasketId) && <div>{product.basket.user.email}</div>}
+        {(product.basketId !== checkBasketId) && <hr/>}
+        {(product.basketId !== checkBasketId) &&  <span style={{display:'none'}}>{checkBasketId = product.basketId}</span>}
+        <div>{' | '+product.device.name+ ' | '+product.amount }</div>
+    </>
+    );
+    console.log(newBasket);
     return (
         <div>
-            {user.map(item=><div key={item.id}>
-
-                {basket.map((product,index)=>{
-                    if(product.basketId === item.id){
-
-                    }
-                })}
-            </div>)}
+            {newBasket.map((item,index)=><div key={index}>{item}</div>)}
         </div>
     );
 };
